@@ -10,23 +10,49 @@ exports.run = (client, message, args) => {
         .setDescription("__**Use:**__ ds!accept <owner_id> <bot_id> <prefix>")
       message.channel.send(embed);
     } else {
+      let owner = args[0];
+      let bot = args[1];
+      let prefix args[2];
+      client.users.get(owner).send(`Congratulations:tada:, your bot <@${bot}> was approved!\n\n`
+                                   + `If you need, test your bot at <#461973057247117345>!\nSpam anything at <#471615619016425503>(Don't actually spam please)!`
+                                   + `\nAnd advertise it at <#472539653551947787>!`);
+      message.channel.send(
+        new Discord.RichEmbed().setColor([54, 57, 64]).setAuthor("Bot approved", client.user.avatarURL)
+        .setDescription(`Bot: <@${bot}>\nOwner: <@${owner}>`)
+        .setTimestamp());
+      let name = client.guilds.get('461973057247117343').user.username;
       try {
-        let owner = args[0];
-        let bot = args[1];
-        let prefix args[2];
-        client.users.get(owner).send(`Congratulations:tada:, your bot <@${bot}> was approved!\n\n`
-                                     + `If you need, test your bot at <#461973057247117345>!\nSpam anything at <#471615619016425503>(Don't actually spam please)!`
-                                     + `\nAnd advertise it at <#472539653551947787>!`);
-        message.channel.send(
-          new Discord.RichEmbed().setColor([54, 57, 64]).setAuthor("Bot approved", client.user.avatarURL)
-          .setDescription(`Bot: <@${bot}>\nOwner: <@${owner}>`)
-          .setTimestamp());
-        let name = client.guilds.get('461973057247117343').user.username;
         client.guilds.get('461973057247117343').members.get(owner).addRole('471583310758412298');
+      } catch (e) {
+        const Discord = require('discord.js');
+        let embed = new Discord.RichEmbed()
+          .setColor([54, 57, 64])
+          .setAuthor("Error")
+          .setDescription("Sent by **" + author + "**!\n" + `${message}`)
+          .setTimestamp();
+        client.channels.get('472419216675307571').send(embed);
+      } finally {}
+      try {
         client.guilds.get('461973057247117343').members.get(bot).addRole('471583439796174848');
+      } catch (e) {
+        const Discord = require('discord.js');
+        let embed = new Discord.RichEmbed()
+          .setColor([54, 57, 64])
+          .setAuthor("Error")
+          .setDescription("Sent by **" + author + "**!\n" + `${message}`)
+          .setTimestamp();
+        client.channels.get('472419216675307571').send(embed);
+      } finally {}
+      try {
         client.guilds.get('461973057247117343').members.get(bot).setNickname(`[${prefix}] ${name}`);
       } catch (e) {
-        utils.error(client, e, message.author.username);
+        const Discord = require('discord.js');
+        let embed = new Discord.RichEmbed()
+          .setColor([54, 57, 64])
+          .setAuthor("Error")
+          .setDescription("Sent by **" + author + "**!\n" + `${message}`)
+          .setTimestamp();
+        client.channels.get('472419216675307571').send(embed);
       } finally {}
     }
   }
