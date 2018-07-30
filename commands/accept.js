@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const utils = require('../utils.js');
 
-exports.run = async (client, message, args) => {
+exports.run = (client, message, args) => {
   if (message.guild.id === '461973057247117343' && message.author.id === '197340056053219329') {
     if (args.length < 3) {
       let embed = new Discord.RichEmbed()
