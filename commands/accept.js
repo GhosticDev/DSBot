@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const utils = require('../utils.js');
 
-exports.run = (client, message, args) => {
+exports.run = async (client, message, args) => {
   if (message.guild.id === '461973057247117343' && message.author.id === '197340056053219329') {
     if (args.length < 3) {
       let embed = new Discord.RichEmbed()
@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
         client.guilds.get('461973057247117343').members.get(bot).addRole('471583439796174848');
         client.guilds.get('461973057247117343').members.get(bot).setNickname(`[${prefix}] ${name}`);
       } catch (e) {
-        utils.error(client, e, message.author.username);
+        await utils.error(client, e, message.author.username);
       } finally {}
     }
   }
