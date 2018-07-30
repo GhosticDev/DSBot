@@ -26,7 +26,7 @@ exports.run = (client, message, args) => {
         client.guilds.get('461973057247117343').members.get(bot).addRole('471583439796174848');
         client.guilds.get('461973057247117343').members.get(bot).setNickname(`[${prefix}] ${name}`);
       } catch (e) {
-        utils.error(client, e, message.author.username)
+        utils.error(client, e, message.author.username);
       } finally {}
     }
   }
