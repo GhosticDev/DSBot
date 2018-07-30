@@ -7,6 +7,7 @@ client.prefix = config.prefix;
 client.on("ready", () => {
   console.log("Bot iniciado!\n\nUsers: " + client.users.size + "\nServidores: " + client.guilds.size);
   client.user.setActivity(`${client.users.size} users`, {type: "Watching"});
+  client.channels.get('473445776337534976').send("Sup! I'm online!");
 });
 
 client.on("message", async message => {
