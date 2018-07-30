@@ -1,8 +1,11 @@
 {
-	"name": "DSBot",
+	"name": "Faqs",
 	"version": "1.0.0",
-	"description": "Discord Bot",
-	"main": "index.js",
+	"description": "Metin2 Discord Bot",
+	"main": "Bot.js",
+  "engines": {
+    "node": "8.4.0"
+  },
 	"dependencies": {
 		"discord.js": "^11.3.2"
 	}
