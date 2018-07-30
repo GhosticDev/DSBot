@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
       if (args.length < 2) {
         let embed = new Discord.RichEmbed()
           .setColor([54, 57, 64])
-          .setAuthor("Bot Invite", message.guild.iconURL)
+          .setAuthor("Bot Invite", client.user.avatarURL)
           .setDescription("Use: `ds!botinvite <bot_id> <prefix>`")
           .setTimestamp();
         message.channel.send(embed);
@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
         if (!isNaN(number)) {
           let embed = new Discord.RichEmbed()
             .setColor([54, 57, 64])
-            .setAuthor("Bot Invite", message.guild.iconURL)
+            .setAuthor("Bot Invite", client.user.avatarURL)
             .setDescription("Your bot will be added and tested in a private server!" + `\nBot: <@${number}>\nOwner: <@${message.author.id}>\nPrefix: \`${args[1]}\``)
             .setTimestamp();
           message.channel.send(embed);
@@ -28,7 +28,7 @@ exports.run = (client, message, args) => {
         } else {
           let embed = new Discord.RichEmbed()
             .setColor([54, 57, 64])
-            .setAuthor("Bot Invite", message.guild.iconURL)
+            .setAuthor("Bot Invite", client.user.avatarURL)
             .setDescription("Use: `ds!botinvite <bot_id> <prefix>`")
             .setTimestamp();
           message.channel.send(embed);
@@ -37,7 +37,7 @@ exports.run = (client, message, args) => {
     } else {
       let embed = new Discord.RichEmbed()
         .setColor([54, 57, 64])
-        .setAuthor("Error", message.guild.iconURL)
+        .setAuthor("Error", client.user.avatarURL)
         .setDescription("Use: `ds!botinvite <bot_id> <prefix>`" + `\nUse this command on <#472460825626542090> channel!`)
         .setTimestamp();
       message.channel.send(embed);
