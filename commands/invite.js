@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
         let embed = new Discord.RichEmbed()
           .setColor([54, 57, 64])
           .setAuthor("Bot Invite", message.guild.iconURL)
-          .setDescription("Use: `y!botinvite <bot_id> <prefix>`")
+          .setDescription("Use: `ds!botinvite <bot_id> <prefix>`")
           .setTimestamp();
         message.channel.send(embed);
       } else {
@@ -29,7 +29,7 @@ exports.run = (client, message, args) => {
           let embed = new Discord.RichEmbed()
             .setColor([54, 57, 64])
             .setAuthor("Bot Invite", message.guild.iconURL)
-            .setDescription("Use: `y!botinvite <bot_id> <prefix>`")
+            .setDescription("Use: `ds!botinvite <bot_id> <prefix>`")
             .setTimestamp();
           message.channel.send(embed);
         }
@@ -38,7 +38,7 @@ exports.run = (client, message, args) => {
       let embed = new Discord.RichEmbed()
         .setColor([54, 57, 64])
         .setAuthor("Error", message.guild.iconURL)
-        .setDescription("Use: `y!botinvite <bot_id> <prefix>`" + `\nUse this command on <#472460825626542090> channel!`)
+        .setDescription("Use: `ds!botinvite <bot_id> <prefix>`" + `\nUse this command on <#472460825626542090> channel!`)
         .setTimestamp();
       message.channel.send(embed);
     }
