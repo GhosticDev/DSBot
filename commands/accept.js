@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
     if (args.length < 2) {
       let embed = new Discord.RichEmbed()
         .setColor([54, 57, 64])
-        .setAuthor("Accept use")
+        .setAuthor("Accept use", client.user.avatarURL)
         .setDescription("__**Use:**__ ds!accept <owner_id> <bot_id>")
       message.channel.send(embed);
     } else {
@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
                                      + `If you need, test your bot at <#461973057247117345>!\nSpam anything at <#471615619016425503>(Don't actually spam please)!`
                                      + `\nAnd advertise it at <#472539653551947787>!`);
         message.channel.send(
-          new Discord.RichEmbed().setColor([54, 57, 64]).setAuthor("Bot approved")
+          new Discord.RichEmbed().setColor([54, 57, 64]).setAuthor("Bot approved", client.user.avatarURL)
           .setDescription(`Bot: <@${bot}>\nOwner: <@${owner}>`)
           .setTimestamp());
         client.guilds.get('461973057247117343').members.get(owner).addRole('471583310758412298');
