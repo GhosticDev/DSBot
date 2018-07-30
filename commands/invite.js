@@ -38,7 +38,7 @@ exports.run = (client, message, args) => {
       let embed = new Discord.RichEmbed()
         .setColor([54, 57, 64])
         .setAuthor("Error", client.user.avatarURL)
-        .setDescription("Use: `ds!botinvite <bot_id> <prefix>`" + `\nUse this command on <#472460825626542090> channel!`)
+        .setDescription("Use: `ds!invite <bot_id> <prefix>`" + `\nUse this command on <#472460825626542090> channel!`)
         .setTimestamp();
       message.channel.send(embed);
     }
