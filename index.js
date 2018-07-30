@@ -35,12 +35,4 @@ client.on("guildMemberRemove", async member => {
   client.channels.get('471615619016425503').send(`Bye member: **${member.user.username}** (${member.guild.name})`);
 });
 
-client.on("guildCreate", async guild => {
-  client.channels.get('471615619016425503').send(`New server: **${guild.name}** (Owner: ${guild.owner.user.username})(Members: ${guild.memberCount})`);
-});
-
-client.on("guildDelete", async guild => {
-  client.channels.get('471615619016425503').send(`Bye server: **${guild.name}**`);
-});
-
 client.login(config.token);
