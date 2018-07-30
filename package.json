@@ -1,0 +1,9 @@
+{
+	"name": "DSBot",
+	"version": "1.0.0",
+	"description": "Discord Bot",
+	"main": "index.js",
+	"dependencies": {
+		"discord.js": "^11.3.2"
+	}
+}
