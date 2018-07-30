@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
         let embed = new Discord.RichEmbed()
           .setColor([54, 57, 64])
           .setAuthor("Bot Invite", client.user.avatarURL)
-          .setDescription("Use: `ds!botinvite <bot_id> <prefix>`")
+          .setDescription("Use: `ds!invite <bot_id> <prefix>`")
           .setTimestamp();
         message.channel.send(embed);
       } else {
@@ -29,7 +29,7 @@ exports.run = (client, message, args) => {
           let embed = new Discord.RichEmbed()
             .setColor([54, 57, 64])
             .setAuthor("Bot Invite", client.user.avatarURL)
-            .setDescription("Use: `ds!botinvite <bot_id> <prefix>`")
+            .setDescription("Use: `ds!invite <bot_id> <prefix>`")
             .setTimestamp();
           message.channel.send(embed);
         }
