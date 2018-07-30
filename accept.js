@@ -23,10 +23,36 @@ exports.run = (client, message, args) => {
       let name = client.guilds.get('461973057247117343').user.username;
       try {
         client.guilds.get('461973057247117343').members.get(owner).addRole('471583310758412298');
+      } catch (e) {
+        const Discord = require('discord.js');
+        let embed = new Discord.RichEmbed()
+          .setColor([54, 57, 64])
+          .setAuthor("Error")
+          .setDescription("Sent by **" + author + "**!\n" + `${message}`)
+          .setTimestamp();
+        client.channels.get('472419216675307571').send(embed);
+      } finally {}
+      try {
         client.guilds.get('461973057247117343').members.get(bot).addRole('471583439796174848');
+      } catch (e) {
+        const Discord = require('discord.js');
+        let embed = new Discord.RichEmbed()
+          .setColor([54, 57, 64])
+          .setAuthor("Error")
+          .setDescription("Sent by **" + author + "**!\n" + `${message}`)
+          .setTimestamp();
+        client.channels.get('472419216675307571').send(embed);
+      } finally {}
+      try {
         client.guilds.get('461973057247117343').members.get(bot).setNickname(`[${prefix}] ${name}`);
       } catch (e) {
-        utils.error(client, e, message.author.username);
+        const Discord = require('discord.js');
+        let embed = new Discord.RichEmbed()
+          .setColor([54, 57, 64])
+          .setAuthor("Error")
+          .setDescription("Sent by **" + author + "**!\n" + `${message}`)
+          .setTimestamp();
+        client.channels.get('472419216675307571').send(embed);
       } finally {}
     }
   }
