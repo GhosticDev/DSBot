@@ -3,13 +3,14 @@ const utils = require('../utils.js');
 
 exports.run = (client, message, args) => {
   if (message.guild.id === '461973057247117343' && message.author.id === '197340056053219329') {
-    if (args.length < 3) {
+    if (args.length >= 0 && args.length <= 2) {
       let embed = new Discord.RichEmbed()
         .setColor([54, 57, 64])
         .setAuthor("Accept use", client.user.avatarURL)
         .setDescription("__**Use:**__ ds!accept <owner_id> <bot_id> <prefix>")
       message.channel.send(embed);
-    } else {
+    }
+    if (args.length > 2) {
       let owner = args[0];
       let bot = args[1];
       let prefix args[2];
