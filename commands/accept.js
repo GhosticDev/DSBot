@@ -13,7 +13,7 @@ exports.run = (client, message, args) => {
     if (args.length > 2) {
       let owner = args[0];
       let bot = args[1];
-      let prefix args[2];
+      let prefix = args[2];
       client.users.get(owner).send(`Congratulations:tada:, your bot <@${bot}> was approved!\n\n`
                                    + `If you need, test your bot at <#461973057247117345>!\nSpam anything at <#471615619016425503>(Don't actually spam please)!`
                                    + `\nAnd advertise it at <#472539653551947787>!`);
