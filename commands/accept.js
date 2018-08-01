@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
         new Discord.RichEmbed().setColor([54, 57, 64]).setAuthor("Bot approved", client.user.avatarURL)
         .setDescription(`Bot: <@${bot}>\nOwner: <@${owner}>`)
         .setTimestamp());
-      let name = client.guilds.get('461973057247117343').user.username;
+      let name = client.guilds.get('461973057247117343').members.get(bot).user.username;
       try {
         client.guilds.get('461973057247117343').members.get(owner).addRole('471583310758412298');
       } catch (e) {
