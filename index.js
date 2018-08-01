@@ -12,6 +12,11 @@ client.on("ready", () => {
 
 client.on("message", async message => {
   let msg = message.content.toLowerCase();
+	if (msg.includes("https://") {
+	    message.delete();
+	message.channel.send(`<@${message.author.id}>, não podes postar links!`);
+	    return;
+	   }
 	if (message.author.bot) return undefined;
   let user = message.author;
 
