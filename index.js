@@ -46,7 +46,7 @@ client.on('guildMemberAdd', async member => {
       }).then(console.log).catch(console.error);
     } else {
       client.channels.get('471722339969662999').edit({
-        name: `Members: ${members}`
+        name: `Users: ${members}`
       }).then(console.log).catch(console.error);
     }
   }
@@ -69,7 +69,7 @@ client.on('guildMemberRemove', async member => {
       }).then(console.log).catch(console.error);
     } else {
       client.channels.get('471722339969662999').edit({
-        name: `Members: ${members}`
+        name: `Users: ${members}`
       }).then(console.log).catch(console.error);
     }
   }
